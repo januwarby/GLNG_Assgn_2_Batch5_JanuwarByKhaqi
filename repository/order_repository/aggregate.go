@@ -15,6 +15,7 @@ type OrderItem struct {
 }
 
 func (oim *OrderItemMapped) HandleMappingOrderWithItems(orderItem []OrderItem) []OrderItemMapped {
+
 	ordersItemsMapped := []OrderItemMapped{}
 
 	for _, eachOrderItem := range orderItem {
@@ -30,6 +31,7 @@ func (oim *OrderItemMapped) HandleMappingOrderWithItems(orderItem []OrderItem) [
 		}
 
 		if !isOrderExist {
+
 			orderItemMapped := OrderItemMapped{
 				Order: eachOrderItem.Order,
 			}

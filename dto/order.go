@@ -3,8 +3,8 @@ package dto
 import "time"
 
 type NewOrderRequest struct {
-	OrderedAt    time.Time        `json:"orderedAt"`
-	CustomerName string           `json:"customerName"`
+	OrderedAt    time.Time        `json:"orderedAt" example:"2023-07-10T21:21:46+00:00"`
+	CustomerName string           `json:"customerName" example:"John Doe"`
 	Items        []NewItemRequest `json:"items"`
 }
 
@@ -16,4 +16,16 @@ type GetItemResponse struct {
 	OrderId     int       `json:"orderId"`
 	CreatedAt   time.Time `json:"createdAt"`
 	UpdatedAt   time.Time `json:"updatedAt"`
+}
+
+type NewOrderResponse struct {
+	StatusCode int         `json:"statusCode"`
+	Message    string      `json:"message"`
+	Data       interface{} `json:"data"`
+}
+
+type GetOrdersResponse struct {
+	StatusCode int              `json:"statusCode"`
+	Message    string           `json:"message"`
+	Data       []OrderWithItems `json:"data"`
 }

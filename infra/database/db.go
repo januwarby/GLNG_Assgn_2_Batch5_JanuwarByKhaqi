@@ -10,9 +10,9 @@ import (
 
 const (
 	host     = "localhost"
-	port     = 3000
+	port     = 5432
 	user     = "postgres"
-	password = "1234"
+	password = "root"
 	dbname   = "order-app"
 	dialect  = "postgres"
 )
