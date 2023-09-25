@@ -115,6 +115,22 @@ paths:
       tags:
       - orders
   /orders/{orderId}:
+    delete:
+      description: Delete Order Data By Id
+      operationId: delete-order
+      parameters:
+      - description: order's id
+        in: path
+        name: orderId
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dto.NewOrderResponse'
+      tags:
+      - orders
     put:
       consumes:
       - application/json

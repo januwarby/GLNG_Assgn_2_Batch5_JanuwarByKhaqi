@@ -95,6 +95,30 @@
                         }
                     }
                 }
+            },
+            "delete": {
+                "description": "Delete Order Data By Id",
+                "tags": [
+                    "orders"
+                ],
+                "operationId": "delete-order",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "order's id",
+                        "name": "orderId",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/dto.NewOrderResponse"
+                        }
+                    }
+                }
             }
         }
     },
